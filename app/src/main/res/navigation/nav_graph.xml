@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/fragmentoConstruirPlazoFijo">
+
+    <fragment
+        android:id="@+id/fragmentoConstruirPlazoFijo"
+        android:name="com.example.federicoisaia.FragmentoConstruirPlazoFijo"
+        android:label="fragment_fragmento_construir_plazo_fijo"
+        tools:layout="@layout/fragment_fragmento_construir_plazo_fijo" >
+        <action
+            android:id="@+id/action_fragmentoConstruirPlazoFijo_to_fragmentoSimularPlazoFijo"
+            app:destination="@id/fragmentoSimularPlazoFijo" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentoSimularPlazoFijo"
+        android:name="com.example.federicoisaia.FragmentoSimularPlazoFijo"
+        android:label="fragment_fragmento_simular_plazo_fijo"
+        tools:layout="@layout/fragment_fragmento_simular_plazo_fijo" >
+        <action
+            android:id="@+id/action_fragmentoSimularPlazoFijo_to_fragmentoConstruirPlazoFijo"
+            app:destination="@id/fragmentoConstruirPlazoFijo" />
+    </fragment>
+</navigation>
